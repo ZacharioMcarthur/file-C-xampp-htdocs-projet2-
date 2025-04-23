@@ -1,0 +1,146 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+main{
+    background-color: #6BADD4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+/*Connexion*/
+.main-container{
+    width: 450px;
+    height: 340px;
+    box-shadow: 1px 5px 10px 5px rgb(5, 3, 0, 0.1);;
+    border-radius: 10px;
+    background: white;
+    display: flex;
+    overflow: hidden;  
+    transition: .5s ease;  
+}
+.active {
+    height: 500px; /* au lieu de 460px */
+}
+
+.main-container .connexion{
+    position: relative;
+    text-align: center;
+    min-width: 100%;
+    min-height: 100%;
+    transform: translateX(0);
+}
+.main-container .inscription{
+    transform: translateX(400px);
+    min-width: 100%;
+    min-height: 100%;
+}
+.active .condefile{
+    transform: translateX(-500px);
+}
+.active .insdefile{
+    transform: translateX(-450px);
+    text-align: center;
+}
+.main-container h2{
+    text-align: center;
+    font-size: clamp(15px, 6vw, 25px);
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 30px;
+    color:#406880;
+}
+.input-box{
+    width: 90%;
+    height: 40px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background: white;
+}
+.connexion .input-box{
+    margin: 10px;
+    margin-left: 21px;
+}
+.inscription .input-box{
+    margin: 10px;
+    margin-left: 12px;
+}
+.input-box label{
+    position: absolute;
+    left: 5.5%;
+    transition: .5s ease;
+    font-size: 1.1em;
+}
+.input-box input{
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    font-size: 1.1em;
+    background-color: aliceblue;
+}
+.input-box input:focus~label,
+.input-box input:valid~label{
+    font-size: 0.8em;
+}
+h4{
+    margin-bottom: 5px;
+}
+#reg-link{
+    margin-top: 20px;
+}
+#reg-link a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+#reg-link a:hover{
+    color: rgb(0, 76, 255);
+}
+#log-link{
+    margin-top: 20px;
+}
+#log-link a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+#log-link a:hover{
+    color: rgb(0, 76, 255);
+}
+
+
+button[type="submit"]{
+    padding: 15px 20px;
+    cursor: pointer;
+    border: none;
+    width: 50%;
+    background-color: #007BFF;
+    color: white;
+    font-weight: 500;
+    font-size: 1em;
+    border-radius: 10px;
+    margin-top: 20px;
+    transition: .5s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+    color:aliceblue;
+}
+
+/* Espacement vertical entre les input-box */
+.input-box:not(:last-child) {
+    margin-bottom: 15px;
+}
+
+/* Correction pour la section d'inscription si nécessaire */
+.inscription form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

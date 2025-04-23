@@ -1,0 +1,125 @@
+*,::before,::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background-color: #6BADD4;
+    padding: 20px;
+    display: grid;
+    place-items: center;
+    padding: 0 1rem;
+}
+main{
+    padding: 10%;
+}
+
+.form-container {
+    width: 100%;
+    max-width: 500px;
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 10px/*ombre droite*/ 10px/*ombre du bas*/ 14px/*ombre du container avec 10px best*/ rgb(0, 0, 0, 0.1); /*box-shadow permet de mettre la div en 3D*/
+    overflow: hidden ;/*hidden pour cacher toutes les imperfections*/
+}
+
+.form-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: clamp(20px,5vw,28px);
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: 2px;
+    color:#406880;
+}
+.form-container .items label{
+    display: block;
+    margin-top: 20px;
+    font-size: clamp(12px,2vw,18px);
+}
+form .news{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+form .name-news{
+    width: 48%;
+}
+form .inline{
+display: flex;
+flex-direction: row;
+justify-content: space-around;
+}
+form .inline input{
+    height: 10px;
+    width: 10px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    background-color: aliceblue;
+}
+input:focus, textarea:focus{
+    border:1px solid #8283E3;
+}
+form textarea{
+    height: 120px;
+    resize: none;
+}
+form button[type="submit"]{
+    cursor: pointer;
+    border: none;
+    width: 100%;
+    padding: 12px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+form button[type="submit"]:hover {
+    background-color: #0056b3;
+    color:aliceblue;
+}
+
+form button[type="reset"]{
+    cursor: pointer;
+    border: none;
+    width: 100%;
+    padding: 12px;
+    background-color:#C9C9C9;
+    border: none;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+form button[type="reset"]:hover {
+    background-color: rgba(128, 128, 128, 0.978);
+    color:azure;
+}
+
+
+.good-infos,.bad-infos{
+    text-align: center;
+    padding: 0.5rem 0;
+    margin: 1rem;
+}
+ 
+.good-infos{
+    background-color: #269C1D;
+    color: #34D427;
+}
+.bad-infos{
+    background-color: #B52914;
+    color: #ED361A;
+}

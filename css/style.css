@@ -1,0 +1,183 @@
+*,::before,::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body{
+    height: 100vh;
+    width: 100%;
+    font-family: sans-serif,arial;
+    background-color: #1F2B38;
+}
+nav{
+    font-family: montserrat;
+    background-color:#4F628A;
+    height: 80px;
+    width: 100%;
+    position: fixed;
+    z-index: 1000;
+}
+nav label.logo{
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bold;
+}
+nav ul{
+    float: right;
+    margin-right: 20px;
+}nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+
+nav ul li a{
+    font-size: 17px;
+    text-transform: uppercase;
+    padding: 7px 13px;
+    border-radius: 3px;
+    color: white;
+}
+
+nav a.active, nav a:hover{
+    background: #728DC7;
+    transition: .5s;
+}
+nav .checkbtn{
+    font-size: 30px;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+nav #check{
+    display: none;
+}
+@media (max-width:952px){
+    nav label.logo{
+        font-size: 30px;
+        padding-left: 50px;
+    }
+}
+@media (max-width:858px){
+    nav .checkbtn{
+        display: block;
+    }
+    nav ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #2c3e50;
+        top:80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+    a:hover,a.active{
+        background: none;
+        color: white;
+    }
+    #check:checked ~ ul{
+        left: 0;
+    }
+    ::selection{
+        height: calc(100vh - 80px);
+    }
+    main{
+        /* Définir l'image de fond */
+    background-image: url(image/1.jpg);
+    background-size: cover; /* L'image couvrira toute la zone du main */
+    background-position: center; /* Centrer l'image */
+    
+    /* Définir les dimensions */
+    width: 100%; /* Largeur totale */
+    height: 800px; /* Hauteur spécifique (ici, 500px mais vous pouvez ajuster) */
+    
+    }
+}
+
+/* style du main*/
+main{
+    padding: 60px;
+    background-color: #4F4F4F;
+    color: white;
+}
+
+main #site-presentation{
+    text-align: center;
+    padding: 15%;
+}
+main .welcome{
+    font-family: montserrat;
+    font-size: clamp(20px,5vw,35px);
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+
+
+/* style du footer*/
+footer{
+    background-color: black;
+    margin-bottom: 0;
+}
+footer .main-footer{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+}
+footer .border-footer{
+    height: 10px;
+    background-color:#8F8F8F;
+}
+footer .more-news-on-website{
+    padding: 40px;
+    color: lightgrey;
+}
+footer .more-news-on-website .row{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+footer .more-news-on-website .row .col-md-3{
+    margin-left: 100px;
+}
+footer .copyright{
+    padding: 10px;
+    margin: 10px;
+    color:#abb2bf;
+}
+footer .underlined{
+    border-bottom: 2px solid #B5B5B5;
+    padding-top: 10px;
+}
+footer ul li:hover{
+    color: white;
+    border-bottom: 2px solid lightgrey;
+    padding-top: 10px;
+    cursor: pointer;
+}
+/* footer  img{
+    width: 100px;
+    height: 100px;
+  } */
+footer ol li{
+    list-style-type: none;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+}
